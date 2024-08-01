@@ -1,7 +1,9 @@
 <template>
     <nav class="bg-white px-20 py-2 shadow-md ">
         <div class="flex justify-between items-center">
-            <h1 class="cursor-pointer">Nepal Government service</h1>
+            <h1 class="cursor-pointer">
+                <router-link to="/" class="text-gray-700 ">Nepal Government Service</router-link>
+            </h1>
             <Dropdown :options="options">
                 <Avatar class="cursor-pointer"
                         :shape="'square'"

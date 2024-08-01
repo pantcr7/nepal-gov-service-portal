@@ -1,0 +1,147 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:NEABILL-{MM}-{YY}-{##}",
+ "creation": "2024-07-29 23:24:06.228430",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "consumer_name",
+  "column_break_xjkq",
+  "consumer_id",
+  "column_break_upco",
+  "consumer_phone",
+  "column_break_eqfi",
+  "consumer_address",
+  "invoice_section",
+  "bill_no",
+  "bill_date",
+  "column_break_ceru",
+  "usage",
+  "rate_per_unit",
+  "column_break_esxw",
+  "status",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "consumer_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Consumer Name",
+   "options": "Utility Consumer"
+  },
+  {
+   "fieldname": "column_break_xjkq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consumer_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Consumer ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_upco",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "consumer_phone",
+   "fieldtype": "Data",
+   "label": "Consumer Phone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "consumer_address",
+   "fieldtype": "Data",
+   "label": "Consumer Address",
+   "read_only": 1
+  },
+  {
+   "fieldname": "invoice_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice"
+  },
+  {
+   "default": "NEA",
+   "fieldname": "bill_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bill No.",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "now",
+   "fieldname": "bill_date",
+   "fieldtype": "Date",
+   "label": "Bill Date"
+  },
+  {
+   "fieldname": "column_break_ceru",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "usage",
+   "fieldtype": "Float",
+   "label": "Usage",
+   "non_negative": 1,
+   "precision": "2"
+  },
+  {
+   "default": "13",
+   "fieldname": "rate_per_unit",
+   "fieldtype": "Currency",
+   "label": "Rate Per Unit"
+  },
+  {
+   "fieldname": "column_break_esxw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Unpaid\nPaid"
+  },
+  {
+   "fieldname": "column_break_eqfi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-30 00:24:54.634134",
+ "modified_by": "Administrator",
+ "module": "Nepal service",
+ "name": "NEA Bill",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "bill_no"
+}

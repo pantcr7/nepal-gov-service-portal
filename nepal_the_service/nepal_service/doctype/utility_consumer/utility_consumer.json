@@ -1,0 +1,165 @@
+{
+ "actions": [],
+ "autoname": "format:Consumer-{##}",
+ "creation": "2024-07-29 22:53:01.278774",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "consumer_info_section",
+  "consumer_name",
+  "column_break_udwj",
+  "phone",
+  "column_break_erig",
+  "address",
+  "column_break_sxbl",
+  "email",
+  "electricity_service_section",
+  "nea_consumer_id",
+  "column_break_bglj",
+  "nea_counter",
+  "column_break_ncrs",
+  "sc_no",
+  "column_break_jaek",
+  "category",
+  "user_details_section",
+  "user_id",
+  "create_user"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_udwj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_erig",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "column_break_sxbl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "consumer_info_section",
+   "fieldtype": "Section Break",
+   "label": "Consumer Info"
+  },
+  {
+   "fieldname": "electricity_service_section",
+   "fieldtype": "Section Break",
+   "label": "Electricity Service"
+  },
+  {
+   "fieldname": "column_break_bglj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "nea_counter",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "NEA Counter",
+   "options": "\nSirahaS\nKathmanduK\nBhaktapurB\nLalitpurL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_ncrs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sc_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SC. No.",
+   "non_negative": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_jaek",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Domestic\nCommercial\nIndustrial\nNon-Commercial\nTemples",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nea_consumer_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "NEA Consumer ID",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "user_details_section",
+   "fieldtype": "Section Break",
+   "hide_border": 1,
+   "label": "User Details"
+  },
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Link",
+   "label": "User ID",
+   "options": "User"
+  },
+  {
+   "fieldname": "create_user",
+   "fieldtype": "Button",
+   "label": "Create User"
+  },
+  {
+   "fieldname": "consumer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-30 02:25:13.827746",
+ "modified_by": "Administrator",
+ "module": "Nepal service",
+ "name": "Utility Consumer",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "consumer_name"
+}

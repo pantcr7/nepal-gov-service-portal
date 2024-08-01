@@ -11,27 +11,26 @@
         </p>
       </div>
       <div class="mt-20">
-            <Tabs
-            v-model="state.index"
-            :tabs="contents"
-            >
-            <template #default="{ tab }">
-              <div class="p-5">
-                {{ tab.content }}
-              </div>
-            </template>
+        <Tabs v-model="state.index" :tabs="contents">
+          <template #default="{ tab }">
+            <div class="p-5">
+              <component :is="tab.content" />
+            </div>
+          </template>
         </Tabs>
       </div>
     </div>
-    
   </div>
 </template>
 
 <script setup>
-import { onMounted, ref,h } from 'vue';
+import { onMounted, ref, h } from 'vue';
 import Navbar from '../components/Navbar.vue';
 import { user_info } from '../data/user';
-import { Tabs,FeatherIcon } from 'frappe-ui';
+import { Tabs, FeatherIcon } from 'frappe-ui';
+import Electricity from '../components/Electricity.vue';
+import Water from '../components/Water.vue';
+import Gas from '../components/Gas.vue'; 
 
 const userInfo = ref({
   name: 'Guest',
@@ -63,17 +62,17 @@ onMounted(() => {
 const contents = ref([
   {
     label: 'Electricity',
-    content: 'Dashboard content goes here',
+    content: Electricity,
     icon: h(FeatherIcon, { class: 'w-4 h-4', name: 'activity' }),
   },
   {
     label: 'Water',
-    content: 'Profile content goes here',
+    content: Water,
     icon: h(FeatherIcon, { class: 'w-4 h-4', name: 'droplet' }),
   },
   {
     label: 'Gas',
-    content: 'Settings content goes here',
+    content: Gas,
     icon: h(FeatherIcon, { class: 'w-4 h-4', name: 'wind' }),
   },
 ]);
