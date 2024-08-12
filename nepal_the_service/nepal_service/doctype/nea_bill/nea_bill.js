@@ -3,9 +3,9 @@
 
 frappe.ui.form.on("NEA Bill", {
 	refresh(frm) {
-       
-
-
+        if(frm.doc.status == "Paid") {
+            frm.disable_form();
+        }
 	},
     consumer_name: function(frm) {
         frappe.call({
